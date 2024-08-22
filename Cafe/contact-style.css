@@ -1,0 +1,290 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+:root {
+    --primary-color: #e44a8d;
+    --secondary-color: #333;
+    --background-color: #f9f9f9;
+    --text-color: #666;
+    --light-color: #ffffff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    text-transform: capitalize;
+    transition: 0.2s linear;
+}
+
+html {
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--background-color);
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem 3rem;
+    background-color: var(--light-color);
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    position: fixed;
+    width: 100%;
+    top: 0;
+}
+
+header .logo {
+     font-size: 3rem;
+    color: #333;
+    font-weight: bolder;
+}
+
+header .logo span {
+    color: var(--primary-color);
+}
+
+header .navbar a {
+    font-size: 2rem;
+    margin: 0 1.5rem;
+    color: var(--text-color);
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+header .navbar a:hover {
+    color: var(--primary-color);
+}
+
+header #toggler {
+    display: none;
+}
+
+header .fa-bars {
+    font-size: 3rem;
+    color: var(--secondary-color);
+    display: none;
+}
+
+/* Contact Us Section */
+.contact-us {
+    padding: 10rem 2rem;
+    text-align: center;
+    background-color: #ffd6e8;
+}
+
+.contact-us .heading {
+    font-size: 4rem;
+    margin-bottom: 2rem;
+    color: var(--secondary-color);
+}
+
+.contact-us .heading span {
+    color: var(--primary-color);
+}
+
+.contact-us p {
+    font-size: 1.6rem;
+    margin-bottom: 4rem;
+    color: var(--text-color);
+}
+
+.form-container {
+    max-width: 60rem;
+    margin: 0 auto;
+    padding: 2rem;
+    background-color: var(--light-color);
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+    border-radius: 0.5rem;
+}
+
+.input-box {
+    position: relative;
+    margin-bottom: 2.5rem;
+}
+
+.input-box input,
+.input-box textarea {
+    width: 100%;
+    padding: 1rem;
+    font-size: 1.6rem;
+    border: 0.1rem solid var(--text-color);
+    border-radius: 0.5rem;
+    outline: none;
+    background-color: var(--background-color);
+}
+
+.input-box label {
+    position: absolute;
+    top: 1.2rem;
+    left: 1.2rem;
+    font-size: 1.6rem;
+    color: var(--text-color);
+    pointer-events: none;
+    transition: all 0.3s;
+}
+
+.input-box input:focus ~ label,
+.input-box textarea:focus ~ label,
+.input-box input:valid ~ label,
+.input-box textarea:valid ~ label {
+    top: -1rem;
+    left: 1rem;
+    font-size: 1.2rem;
+    color: var(--primary-color);
+}
+
+.input-box textarea {
+    min-height: 15rem;
+    resize: vertical;
+}
+
+.btn {
+    display: inline-block;
+    padding: 1rem 3rem;
+    font-size: 1.6rem;
+    color: var(--light-color);
+    background-color: var(--primary-color);
+    border: none;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    width: 100%;
+}
+
+.btn:hover {
+    background-color: var(--secondary-color);
+}
+
+/* Contact Info Section */
+.contact-info {
+    padding: 8rem 2rem;
+    background-color: var(--background-color);
+}
+
+.contact-info .heading {
+    font-size: 4rem;
+    margin-bottom: 4rem;
+    color: var(--secondary-color);
+    text-align: center;
+}
+
+.contact-info .box-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.contact-info .box {
+    background-color: var(--light-color);
+    padding: 3rem;
+    text-align: center;
+    border-radius: 0.5rem;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+    flex: 1;
+    min-width: 25rem;
+    max-width: 30rem;
+}
+
+.contact-info .box i {
+    font-size: 4rem;
+    color: var(--primary-color);
+    margin-bottom: 2rem;
+}
+
+.contact-info .box h3 {
+    font-size: 2rem;
+    color: var(--secondary-color);
+    margin-bottom: 1rem;
+}
+
+.contact-info .box p {
+    color: var(--text-color);
+    font-size: 1.6rem;
+}
+
+/* Footer Section */
+footer {
+    background-color: var(--secondary-color);
+    color: var(--light-color);
+    padding: 4rem 2rem;
+    text-align: center;
+}
+
+footer .footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: space-around;
+}
+
+footer .footer-box {
+    flex: 1 1 20rem;
+    text-align: left;
+}
+
+footer .footer-box h3 {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+}
+
+footer .footer-box p,
+footer .footer-box a {
+    color: var(--light-color);
+    font-size: 1.5rem;
+    line-height: 2.5rem;
+}
+
+footer .footer-box a:hover {
+    text-decoration: underline;
+}
+
+footer .credit {
+    margin-top: 2rem;
+    font-size: 1.6rem;
+}
+
+footer .credit span {
+    color: var(--primary-color);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    header .navbar {
+        position: fixed;
+        top: 6rem;
+        right: -100%;
+        background: var(--light-color);
+        width: 30rem;
+        height: calc(100% - 6rem);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 2rem;
+        transition: right 0.3s;
+    }
+
+    header #toggler:checked ~ .navbar {
+        right: 0;
+    }
+
+    header .fa-bars {
+        display: block;
+    }
+
+    header .navbar a {
+        font-size: 2.5rem;
+    }
+}
